@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300..900;1,300..900&display=swap');
+@import './styles/admin-dashboard.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: 'Urbanist', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+}
+
+/* Completely hide scrollbars across all browsers while preserving smooth scrolling */
+html,
+body,
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Edge, Opera */
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* ========================================================
+   GLOBAL COMPONENT-BASED DARK THEME (Pure Black & Neutral Gray)
+   Applies pure black to backgrounds and neutral gray to boxes/borders
+   ======================================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #000000;
+  color: #F5F5F5;
+}
+
+/* Background utilities in dark mode:
+   - Page backgrounds -> Pure Black (#000000)
+   - Cards, Boxes, Panels -> Neutral Gray (#141414)
+   - Secondary / elevated containers -> Dark Gray (#1E1E1E)
+   - Borders -> Clean Neutral Gray (#282828 / #333333)
+*/
+html.dark .bg-white {
+  background-color: #141414 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-gray-50,
+html.dark .bg-zinc-50,
+html.dark .bg-neutral-50,
+html.dark .bg-\[\#F7F8FA\],
+html.dark .bg-\[\#f8fafc\] {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .bg-gray-100,
+html.dark .bg-zinc-100 {
+  background-color: #1E1E1E !important;
+}
+
+html.dark .bg-slate-200,
+html.dark .bg-gray-200 {
+  background-color: #282828 !important;
+}
+
+html.dark .bg-slate-900,
+html.dark .bg-gray-900 {
+  background-color: #0A0A0A !important;
+}
+
+html.dark .bg-slate-950,
+html.dark .bg-gray-950 {
+  background-color: #000000 !important;
+}
+
+/* Boxes / Cards & Surface borders -> Neutral Gray */
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300,
+html.dark .border-gray-200,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-200\/80 {
+  border-color: #282828 !important;
+}
+
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #282828 !important;
+}
+
+/* Text colors in dark mode -> Neutral White & Grays */
+html.dark .text-slate-900,
+html.dark .text-gray-900 {
+  color: #F5F5F5 !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-gray-800 {
+  color: #EEEEEE !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-gray-700 {
+  color: #D4D4D4 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-gray-600 {
+  color: #A3A3A3 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-gray-500 {
+  color: #888888 !important;
+}
+
+html.dark .text-slate-400,
+html.dark .text-gray-400 {
+  color: #666666 !important;
+}
+
+/* Headers, Navbars, Sticky bars -> Black with Gray border */
+html.dark header.bg-white\/95,
+html.dark header.bg-white,
+html.dark header {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-color: #242424 !important;
+}
+
+/* Form controls, inputs, selects, textareas -> Gray box with Gray border */
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea {
+  background-color: #1A1A1A !important;
+  color: #F5F5F5 !important;
+  border-color: #2E2E2E !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #737373 !important;
+}
+
+/* Hover states */
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #1E1E1E !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #262626 !important;
+}
+
+/* Hero & Section backgrounds -> Black with Gray border */
+html.dark section {
+  border-color: #222222 !important;
+}
+
+html.dark #hero,
+html.dark #specialties,
+html.dark #doctors,
+html.dark #beds,
+html.dark #trust,
+html.dark #emergency,
+html.dark #facilities {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+/* Card hover states */
+html.dark .hover\:border-emerald-400:hover,
+html.dark .hover\:border-emerald-300:hover {
+  border-color: #16A34A !important;
+}
+html.dark .hover\:bg-\[\#E8F7EE\]\/40:hover {
+  background-color: rgba(22, 163, 74, 0.12) !important;
+}
+
+html.dark .bg-\[\#E8F7EE\] {
+  background-color: rgba(22, 163, 74, 0.16) !important;
+}
+html.dark .border-\[\#d2f0dd\] {
+  border-color: rgba(22, 163, 74, 0.3) !important;
+}
+
+/* Subtle smooth theme transitions */
+body, header, nav, main, footer, .kpi-card, .data-table-container, .topbar, .admin-sidebar, .theme-toggle-btn {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

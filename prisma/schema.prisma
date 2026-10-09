@@ -1,0 +1,14 @@
+// Prisma Foundation for AAHOC (AI-Assisted Hospital Operations Coordinator)
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Note: Foundation only. Full domain schemas and models
+// will be defined in subsequent feature implementation phases.
